@@ -89,7 +89,7 @@ export default class ReceiverPlaylist extends EmitterEventTarget {
   public async updateFromRemote() {
     this.source.playlistMessage('stop');
     try {
-      const response = await fetch('/data/stations.json');
+      const response = await fetch('./data/stations.json');
       const data = await response.json();
 
       let transaction = this.db.transaction([STORAGE], "readwrite");
