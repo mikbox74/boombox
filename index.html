@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html onerror="throw this">
+  <head>
+    <link 
+      id="favicon" 
+      rel="shortcut icon" 
+      type="image/png" href="data:image/png;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADj4+P/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh//j4+P/h4eH/85/8v/Of/L/zn/y/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/zn/y/85/8v/Of/L/h4eH/4eHh//Of/L/zn/y/85/8v/Of/L/zn/y/85/8v/Of/L/zn/y/85/8v/Of/L/zn/y/85/8v/Of/L/zn/y/4eHh/+Hh4f/zn/y/85/8v+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/zn/y/85/8v+Hh4f/h4eH/85/8v+Hh4f/4+Pj/+Pj4/+Hh4f/4+Pj/+Pj4//j4+P/4+Pj/4eHh//j4+P/4+Pj/4eHh//Of/L/h4eH/4eHh//Of/L/h4eH/+Pj4//j4+P/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/4+Pj/+Pj4/+Hh4f/zn/y/4eHh/+Hh4f/zn/y/85/8v+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/zn/y/85/8v+Hh4f/h4eH/85/8v/Of/L/zn/y/85/8v/Of/L/zn/y/85/8v/Of/L/zn/y/85/8v/Of/L/zn/y/85/8v/Of/L/h4eH/4eHh//Of/L/////////////////////////////////////////////////////////////////zn/y/4eHh//j4+P/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh//j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4//j4+P/4+Pj/+Pj4/+Hh4f/4+Pj/+Pj4//j4+P/h4eH/+Pj4//j4+P/h4eH/+Pj4//j4+P/4+Pj/+Pj4//j4+P/h4eH/+Pj4//j4+P/h4eH/+Pj4//j4+P/4+Pj/4eHh/+Hh4f/4+Pj/4eHh/+Hh4f/4+Pj/+Pj4//j4+P/4+Pj/4eHh//j4+P/4uLi/4eHh/+Hh4f/h4eH/+Li4v+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh//i4uL/h4eH/4eHh/+Hh4f/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/h4eH/4eHh//i4uL/h4eH/4eHh//i4uL/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/4uLi/4eHh//i4uL/4uLi/4eHh//i4uL/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+    >
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="media-src * http: blob:">
+    <title>Boombox JS</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div id="unsupported-message">
+      Sorry, the soundsystem works properly in Chromium (also Opera, Chrome, Vivaldi, Yandex) and Firefox (also Pale Moon) browsers only :(
+    </div>
+    <div class="sidebars">
+      <div class="sidebar playlist" title="Playlist">
+        <ul id="playlist" class="sidebar-content"></ul>
+      </div>
+      <div class="sidebar playlist" title="Stations">
+        <ul id="stations" class="sidebar-content"></ul>
+        <div class="sidebar-actions">
+          <button class="button" data-open="#stations-form">add</button>
+          <button class="button" id="stations-update">update</button>
+        </div>
+      </div>
+      <!-- <div class="sidebar" title="Configuration">
+
+      </div> -->
+      <!-- <div class="sidebar" title="EQ Presets">
+
+      </div> -->
+      <!-- <div class="sidebar" title="FAQ">
+        
+      </div> -->
+    </div>
+    <div class="box">
+      <div class="as left">
+        <div class="top-panel">
+          <span class="brand">
+          mayak
+          </span>
+        </div>
+        <div class="gril">
+          <div class="twitter">
+            <div class="driver"></div>
+          </div>
+          <div class="bass">
+            <div class="driver" id="left-bassdriver"></div>
+          </div>
+        </div>
+        <div class="bottom-line">
+          <div>2-way speaker system</div>
+        </div>
+      </div>
+      <div class="deck">
+      <div class="pane-top">
+        <div class="top-panel">
+          <span class="brand">
+            mayak
+          </span>
+          <span>
+            portable stereo hi-fi sistem
+          </span>
+        </div>
+      </div>
+      <div class="pane-top">
+        <div class="radio-pane" id="radio-roatate-wheel">
+          <div>
+            <div class="indicator-label">
+              fm stereo
+              <div class="led-border">
+                <div class="led led-red" id="led-stereo"></div>
+              </div>
+            </div>
+            <div class="radio-tuning">
+              <div>tuning</div>
+              <div class="wheel">
+                <button id="radio-prev"></button>
+                <button id="radio-next"></button>
+              </div>
+            </div>
+          </div>
+          <div class="radio-band">
+            <div class="radio-scale">
+              <i>87</i>
+              <i>89</i>
+              <i>93</i>
+              <i>96</i>
+              <i>101</i>
+              <i>105</i>
+              <i>108</i>
+            </div>
+            <div class="radio-scale">
+              <i>530</i>
+              <i>680</i>
+              <i>900</i>
+              <i>1200</i>
+              <i>1450</i>
+              <i>1600</i>
+            </div>
+            <div class="radio-scale radio-title" id="radio-info" data-marquee="Radio is offline"></div>
+            <input id="radio-scale" min="0" step="1" max="100" type="range" value="0" autocomplete="off">
+          </div>
+        </div>
+      </div>
+      <div class="pane-top">
+        <div class="eq-pane">
+          <div class="scale-container volume-pane">
+            <div class="scale-labels volume-labels">
+              <label>volume</label>
+              <label>balance</label>
+            </div>
+            <div class="scale scale-volume">
+              <range-slider class="vol-slider" min="0" max="4" value="1" step="0.1" id="amplifier-volume"></range-slider>
+              <range-slider class="bal-slider" min="-1" max="1" value="0" step="0.1" id="amplifier-balance"></range-slider>
+              <span class="db left top">max</span>
+              <span class="db left bottom">min</span>
+              <span class="db right top">r</span>
+              <span class="db right bottom">l</span>
+            </div>
+            <div class="brand-label">
+              hi-fi amplifier
+            </div>
+          </div>
+          <div class="scale-container">
+            <div class="scale-labels">
+              <label>60Hz</label>
+              <label>120Hz</label>
+              <label>250Hz</label>
+              <label>1kHz</label>
+              <label>3kHz</label>
+              <label>10kHz</label>
+              <label>14kHz</label>
+            </div>
+            <div class="scale scale-eq">
+              <range-slider min="-12" max="12" value="0" step="0.1" id="equalizer-1"></range-slider>
+              <range-slider min="-12" max="12" value="0" step="0.1" id="equalizer-2"></range-slider>
+              <range-slider min="-12" max="12" value="0" step="0.1" id="equalizer-3"></range-slider>
+              <range-slider min="-12" max="12" value="0" step="0.1" id="equalizer-4"></range-slider>
+              <range-slider min="-12" max="12" value="0" step="0.1" id="equalizer-5"></range-slider>
+              <range-slider min="-12" max="12" value="0" step="0.1" id="equalizer-6"></range-slider>
+              <range-slider min="-12" max="12" value="0" step="0.1" id="equalizer-7"></range-slider>
+              <span class="db left top">+12dB</span>
+              <span class="db left bottom">-12dB</span>
+              <span class="db right top">+12dB</span>
+              <span class="db right bottom">-12dB</span>
+            </div>
+            <div class="brand-label">7-band graphic equalizer</div>
+          </div>
+          <div class="scale-container controls-pane">
+            <div class="controls">
+              <div class="control-labels">
+                function
+              </div>
+              <div class="control-buttons">
+                <button id="f-tape">tape</button>
+                <button id="f-radio">radio</button>
+                <button id="f-aux">aux</button>
+              </div>
+              <div class="control-labels">
+                repeat mode
+              </div>
+              <div class="control-buttons">
+                <button id="button-repeat-all">all</button>
+                <button id="button-repeat-dir">dir</button>
+                <button id="button-repeat-track">trk</button>
+              </div>
+              <div class="control-labels">
+                autostart
+              </div>
+              <div class="control-buttons">
+                <button id="button-autostart">on / off</button>
+              </div>
+            </div>
+            <div class="brand-label">Logic control</div>
+          </div>
+        </div>
+      </div>
+      <div class="pane" id="cassette-deck">
+        <div class="case">
+          <div class="top label">
+            <span id="supported-formats"></span> PLAYER
+          </div>
+          <div class="bottom label">
+            <div class="progress">
+              <div class="progress-line">
+                <div class="progress-time-mark" id="time-mark"></div>
+                <div id="load-progressbar" class="progress-bar">
+                  <div class="progress-head" id="progress-head">
+                    <div class="progress-head-handler"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lcd" id="progress-info"></div>
+            <div class="lcd" id="progress-percent"></div>
+          </div>
+        </div>
+        <div class="cassette">
+          <div class="cassette-case">
+            <div class="note">
+              <div class="line truncated" id="track-path">--</div>
+              <div class="line">
+                <div class="title" id="track-name" data-marquee="--"></div>
+                <div class="duration" id="track-time">--:--</div>
+              </div>
+            </div>
+            <div class="prints">
+              <div class="side">a</div>
+              <div class="format">c-90</div>
+            </div>
+          </div>
+          <div class="reel left" id="reel-left">
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+          </div>
+          <div class="reel right">
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+            <div class="reel-cog"></div>
+          </div>
+          <div class="tape left" id="tape-left"></div>
+          <div class="tape right" id="tape-right"></div>
+        </div>
+      </div>
+      <div class="pane2">
+        <div class="top label">
+          display
+        </div>
+        <div class="levels">
+          <div class="title">
+            level meter
+          </div>
+          <div class="level">
+            +3dB
+            <div class="led-border">
+              <div class="led led-red" id="lvl3"></div>
+            </div>
+          </div>
+          <div class="level">
+            0dB
+            <div class="led-border">
+              <div class="led led-yellow" id="lvl0"></div>
+            </div>
+          </div>
+          <!--<div class="level">
+            -3dB
+            <div class="led-border">
+              <div class="led led-green"></div>
+            </div>
+          </div>-->
+          <div class="level">
+            -5dB
+            <div class="led-border">
+              <div class="led led-green" id="lvl-5"></div>
+            </div>
+          </div>
+          <div class="level">
+            -15dB
+            <div class="led-border">
+              <div class="led led-green" id="lvl-15"></div>
+            </div>
+          </div>
+          <div class="level">
+            -20dB
+            <div class="led-border">
+              <div class="led led-green" id="lvl-20"></div>
+            </div>
+          </div>
+        </div>
+        <div class="repeat">
+          <div class="repeat-title">
+            repeat
+          </div>
+          <div class="repeat-indicators">
+            <div class="repeat-labels">
+              <div>all</div>
+              <div>dir</div>
+              <div>trk</div>
+            </div>
+            <div class="led-border">
+              <div class="led led-red" id="led-all"></div>
+            </div>
+            <div class="led-border">
+              <div class="led led-red" id="led-dir"></div>
+            </div>
+            <div class="led-border">
+              <div class="led led-red" id="led-track"></div>
+            </div>
+          </div>
+          <div class="autostart-indicator">
+          </div>
+        </div>
+        <div class="autostart">
+          <div class="autostart-label">
+            autostart
+            <div class="led-border">
+              <div class="led led-red" id="led-autostart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="keys">
+        <div class="main-keyboard">
+          <div class="keys-labels">
+            <div>record</div>
+            <div>play</div>
+            <div>previous</div>
+            <div>next</div>
+            <div>stop / eject</div>
+            <div>pause</div>
+          </div>
+          <div class="keys-space">
+            <button class="key record" id="button-record"></button>
+            <button class="key play" id="button-play"></button>
+            <button class="key rew" id="button-rewind"></button>
+            <button class="key ffw" id="button-forward"></button>
+            <button class="key stop" id="button-stop"></button>
+            <button class="key pause"id="button-pause"></button>
+          </div>
+        </div>
+        <div class="extra-keyboard">
+          <div class="keys-labels">
+            <div>prev. dir</div>
+            <div>next dir</div>
+          </div>
+          <div class="keys-space">
+            <button class="key prevdir" id="button-prev-dir"></button>
+            <button class="key nextdir" id="button-next-dir"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="as right">
+        <div class="top-panel">
+          <span class="brand">
+            mayak
+          </span>
+        </div>
+        <div class="gril">
+          <div class="twitter">
+            <div class="driver"></div>
+          </div>
+          <div class="bass">
+            <div class="driver" id="right-bassdriver"></div>
+          </div>
+        </div>
+        <div class="bottom-line">
+          <div>2-way speaker system</div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-overlay" id="stations-form">
+      <div class="dialog">
+        <div class="dialog-header dialog-title">Add a station</div>
+        <div class="dialog-main">
+          <div class="form-control">
+            <label for="station-input-0">ID</label>
+            <input id="station-input-0" type="text" name="station-id" autofocus>
+          </div>
+          <div class="form-control">
+            <label for="station-input-1">Name</label>
+            <input id="station-input-1" type="text" name="station-name">
+          </div>
+          <div class="form-control">
+            <label for="station-input-2">URL</label>
+            <input id="station-input-2" type="text" name="station-url">
+          </div>
+          <div class="form-control">
+            <label for="station-input-3">Parser</label>
+            <select id="station-input-3" type="text" name="station-parser">
+              <option value="">None</option>
+              <option value="shoutcastTagsParser">ShoutCast</option>
+              <option value="icecast224TagsParser">IceCast 2.4.4</option>
+              <option value="jsonTagsParser">JSON</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="station-input-4">Parser params</label>
+            <textarea id="station-input-4" rows="4" name="station-params"></textarea>
+          </div>
+        </div>
+        <div class="dialog-footer">
+          <button class="button" name="station-save">Save</button>
+          <button class="button color-danger" data-close="#stations-form">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="toasts" id="toasts">
+    </div>
+    <!-- <div class="toast toast-error">
+      <div class="toast-title">Error</div>
+      <div class="toast-text">This is a CORS error. The radio player can work properly but if you want to see station info you must install an extension and activate it on this page.</div>
+      <div class="toast-actions">
+        <button class="button">No more warns</button>
+        <button class="button">Go install</button>
+      </div>
+    </div> -->
+  </body>
+</html>
