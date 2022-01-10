@@ -1,0 +1,57 @@
+.toast {
+  background: #000d;
+  border-radius: 2px;
+  width: 100%;
+  margin-bottom: -100%;
+  transition: margin-bottom .2s;
+  box-shadow: #000d 0 0 5px;
+  &s {
+    width: 300px;
+    position: fixed;
+    right: 1rem;
+    bottom: 0;
+    z-index: 10000;
+    contain: content;
+  }
+  &-visible {
+    margin-bottom: 1rem;
+  }
+  &-error {
+    color: #cf1950;
+  }
+  &-info {
+    color: #44b9e7;
+  }
+  &-title {
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid;
+    justify-content: space-between;
+    display: flex;
+  }
+  &-close {
+    text-decoration: none;
+    color: inherit;
+    font-size: 130%;
+    &:hover {
+      text-shadow: 0 0 5px;
+    }
+  }
+  &-text {
+    padding: 0.5rem 1rem;
+    text-align: justify;
+    font-size: 12px;
+  }
+  &-actions {
+    padding: 0.5rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: end;
+    .button {
+      color: inherit;
+      font-size: 12px;
+      padding: 0.5rem 0.75rem;
+      margin-left: 0.5rem;
+    }
+  }
+}

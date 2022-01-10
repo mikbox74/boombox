@@ -1,0 +1,22 @@
+//stripe painting
+@function stripe($distance, $thikness, $color) {
+  @return #{$color}00 $distance, #{$color}ff $distance, #{$color}ff $distance+$thikness, #{$color}00 $distance+$thikness;
+}
+
+//scale painting
+@function stripes(
+  $height, 
+  $padding,
+  $count, 
+  $thikness, 
+  $color
+) {
+  $gutter: ($height - $padding * 2) / ($count - 1);
+  $value: #{$color}00 0;
+  $distance: $padding - $thikness / 2;
+  @for $i from 1 through $count {
+    $value: $value, stripe($distance, $thikness, $color);
+    $distance: $distance + $gutter;
+  }
+  @return $value, #{$color}00 100%;
+}

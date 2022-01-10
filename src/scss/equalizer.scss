@@ -1,0 +1,173 @@
+.eq-pane {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: $font-size;
+  background-image:
+    linear-gradient(#171717, #171717)
+  ;
+  margin: 4px 12px 0px 12px;
+  border: 2px solid;
+  border-radius: 2px;
+  box-shadow: $pane-shadow;
+  border-image: linear-gradient(
+    -160deg,
+    #ffffff33 0%,
+    #ffffff22 0.8%,
+    #ffffff22 10%,
+    #181818 50%,
+    #161616 100%
+  ) 2;
+  padding: 0 0 4px;
+  display: flex;
+  .scale {
+    height: $eq-trackh;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+    &-volume {
+      padding: 0 10px 0 25px;
+      width: $vol-scale-width;
+      span.db {
+        text-transform: uppercase;
+      }
+      input[type='range'] {
+        margin: $vol-margin-top $vol-margin-left 0;
+      }
+    }
+    &-eq {
+      width: $eq-scale-width;
+    }
+    background-repeat: no-repeat;
+    //padding and thikness both odd or even to avoid a rendering bug
+    background-image: 
+      linear-gradient(stripes($eq-trackh, $eq-thumbh/2, 3, 2px, $brand-color))
+      , 
+      linear-gradient(stripes($eq-trackh, $eq-thumbh/2, 11, 1px, #cccccc))
+      ;
+    &-labels {
+      width: $eq-scale-width;
+      margin: 4px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      label:not(:first-child){
+        margin-left:$eq-label-space;
+      }
+    }
+    span.db{
+      position: absolute;
+      &.left {
+        left: 0;
+      }
+      &.right {
+        right: 0;
+      }
+      &.top {
+        top: 0;
+      }
+      &.bottom {
+        bottom:0;
+      }
+    }
+    &-title {
+      width: $eq-scale-width;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+  }
+  .volume-labels {
+    text-transform: uppercase;
+    width: $vol-scale-width;
+    justify-content: space-between;
+  }
+  range-slider {
+    padding: 0;
+    height: $eq-trackh;
+    width: $eq-trackw;
+    outline: 0;
+    @include eq-trackbg;
+    &::part(knob) {
+      @include eq-thumb;
+    }
+  }
+  range-slider.vol-slider {
+    width: $vol-track-width;
+    &::part(knob) {
+      width: $vol-thumbw;
+      border-radius: 1px;
+    }
+  }
+  range-slider.bal-slider {
+    width: $vol-track-width;
+    &::part(knob) {
+      width: $vol-thumbw;
+      border-radius: 1px;
+    }
+  }
+  .scale-container.eq-title {
+    text-transform: uppercase;
+    transform: rotate(-90deg) translateY(50px);
+    flex-shrink: 1;
+    flex-grow: 0;
+  }
+}
+.volume-pane {
+  margin-right: 10px!important;
+}
+.eq-pane .scale-container.controls-pane {
+  width: $pane2-width - 18;
+  margin: 0 4px 0 16px;
+  justify-content: end;
+}
+.control-labels {
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  text-transform:uppercase; 
+  justify-content: start;
+}
+.control-buttons {
+  font-size: 0;
+  display: flex;
+  button {
+    font-size: 8px;
+    font-family: inherit;
+    margin: 0;
+    flex-grow: 1;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 1px 0;
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border-color: #fff #666 #222 #222;
+    cursor: pointer;
+    background-image: linear-gradient(
+      #eee 0%,
+      #999 48%,
+      #666 52%,
+      #444 100%
+    );
+    &.pressed {
+      border-color: #999 #444 #111 #111;
+      background-image: linear-gradient(
+        #999 0%,
+        #999 48%,
+        #444 52%,
+        #444 100%
+      );
+    }
+  }
+}

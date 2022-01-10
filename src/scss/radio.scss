@@ -1,0 +1,249 @@
+.radio-pane {
+  height: 70px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: $font-size;
+  margin: 4px 12px 0px 12px;
+  border: 2px solid;
+  border-radius: 2px;
+  box-shadow: $pane-shadow;
+  border-image: linear-gradient(
+    -160deg,
+    #ffffff33 0%,
+    #ffffff22 0.8%,
+    #ffffff22 10%,
+    #181818 50%,
+    #161616 100%
+  ) 2;
+  padding: 0 0 4px;
+  display: flex;
+  //align-items: center;
+  background-image:
+    linear-gradient(#090909, #090909)
+  ;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background-image: 
+    radial-gradient(
+      circle at 250% 3000%,//very large!
+      #ffffff00 0%,
+      #ffffff10 92.9%,
+      #ffffff44 93%,
+      #ffffff00 99%
+    );
+  }
+  .indicator-label {
+    margin: 6px 0px 0 8px;
+    text-transform: uppercase;
+    background: $brand-color;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+  }
+  .radio-tuning {
+    margin: 4px 0px 0 8px;
+    text-transform: uppercase;
+    background: $brand-color;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    height: 38px;
+    box-sizing: border-box;
+    justify-content: start;
+    .wheel {
+      height: 16px;
+      width: 80px;
+      border-radius: 3px;
+      border: 1px solid;
+      display: flex;
+      border-color: #111 #000 #000 #111;
+      border-width: 1px 2px;
+      background: #000;
+      overflow: hidden;
+      box-shadow: -2px 2px 6px -1px #000;
+    }
+    button {
+      position: relative;
+      z-index: 20;
+      border: none;
+      outline: none;
+      height: 16px;
+      width: 40px;
+      cursor: pointer;
+      //box-shadow: 0 4px 2px 0px #333;
+      &:nth-child(1) {
+        border-radius: 2px 0 0 2px;
+        background-image: 
+          linear-gradient(
+            #ffffff00 0%,
+            #ffffff00 24%,
+            #ffffff66 26%,
+            #ffffff66 74%,
+            #ffffff00 76%,
+            #ffffff00 100%
+          ),
+          linear-gradient(
+            90deg,
+            #000000ff 0%,
+            #00000099 80%,
+            #00000099 100%
+          );
+      }
+      &:nth-child(2) {
+        border-radius: 0 2px 2px 0;
+        background-image: 
+          linear-gradient(
+            #ffffff00 0%,
+            #ffffff00 24%,
+            #ffffff66 26%,
+            #ffffff66 74%,
+            #ffffff00 76%,
+            #ffffff00 100%
+          ),
+          linear-gradient(
+            270deg,
+            #000000ff 0%,
+            #00000099 80%,
+            #00000099 100%
+          );
+      }
+    }
+  }
+  // .led {
+  //   opacity: 0.9;
+  // }
+  .radio-band {
+    border-top: 1px solid $brand-color;
+    border-bottom: 1px solid $brand-color;
+    margin: 6px 4px 0 0;
+    width: 100%;
+    height: 56px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    .radio-scale {
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      position: absolute;
+      left: 0;
+      justify-content: space-between;
+      padding: 0 4px;
+      &.radio-title {
+        display: block;
+        @include marquee(400px);
+      }
+      i:last-child::after {
+        display: none;
+      }
+      &:nth-child(1) {
+        top: 2px;
+        border-bottom: 1px solid #666;
+        padding-bottom: 2px;
+        &:before {
+          content: 'FM';
+          margin-top: -2px;
+          margin-bottom: -6px;
+          width: 30px;
+          border-right: 1px solid #666;
+          padding: 2px 0 0 0;
+          color: $brand-color;
+        }
+        &:after {
+          content: 'MHz';
+          margin-top: -2px;
+          margin-bottom: -6px;
+          width: 30px;
+          border-left: 1px solid #666;
+          padding: 2px 0 0 0;
+          text-align: right;
+          color: $brand-color;
+        }
+      }
+      &:nth-child(2) {
+        bottom: 12px;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid $brand-color;
+        padding-top: 2px;
+        i::after {
+          top: -6px!important;
+          bottom: 0px!important;
+        }
+        &:before {
+          content: 'AM';
+          margin-top: -6px;
+          margin-bottom: 0;
+          width: 30px;
+          border-right: 1px solid #666;
+          padding: 6px 0 0 0;
+          color: $brand-color;
+        }
+        &:after {
+          content: 'kHz';
+          margin-top: -6px;
+          margin-bottom: 0;
+          width: 30px;
+          border-left: 1px solid #666;
+          padding: 6px 0 0 0;
+          text-align: right;
+          color: $brand-color;
+        }
+      }
+      &:nth-child(3) {
+        bottom: 0;
+        text-shadow: 0 0 2px #fff;
+        z-index: 20;
+      }
+      i {
+        position: relative;
+        &::after {
+          content: '';
+          width: 100%;
+          display: inline-block;
+          border-left: 1px solid #666;
+          position: absolute;
+          top: -2px;
+          bottom: -6px;
+          left: 200%;
+        }
+      }
+    }
+    input[type=range] {
+      width: 100%;
+      height: 7px;
+      position: relative;
+      z-index: 10;
+      margin: 0;
+      margin-top: -12px;
+      appearance: none;
+      outline: 0;
+      background: #00000077;
+      box-shadow: inset 1px -1px 2px 0px #333;
+      overflow: hidden;
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        @include radio-pointer;
+      }
+      &::-moz-range-thumb {
+        -moz-appearance: none;
+        @include radio-pointer;
+      }
+    }
+  }
+}
+.radio-pane:hover .radio-band .radio-scale.radio-title:before{
+  width: auto;
+  transform: translateX(calc(400px - 100%));
+}

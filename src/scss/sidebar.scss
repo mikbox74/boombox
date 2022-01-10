@@ -1,0 +1,77 @@
+$tab-height: 40px;
+$tab-width: 120px;
+$tab-margin-bottom: 2px;
+$sidebar-width: 400px;
+$sidebar-zindex: 30;
+
+.sidebars {
+  position: absolute;
+  top: 0;
+  height: 0;
+}
+.sidebar {
+  text-align: left;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #000000dd;
+  transform: translateX(-100%);
+  width: $sidebar-width;
+  transition: transform .2s;
+  color: #eee;
+  font-size: 12px;
+  z-index: $sidebar-zindex;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  &:hover {
+    transform: translateX(0);
+    z-index: $sidebar-zindex + 1;
+    box-shadow: 0 0 8px 0px #00000088;
+  }
+  &:before {
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    height: $tab-height;
+    line-height: $tab-height;
+    position: absolute;
+    right: 0;
+    content: attr(title);
+    display: block;
+    align-items: center;
+    text-align: left;
+    transform: translateX(100%);
+    background: inherit;
+    width: $tab-width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: 0 2px 20px 0;
+    box-shadow: 0 0 8px 0px #00000088;
+    font-style: italic;
+  }
+
+  @for $n from 1 to 15 {
+    &:nth-child(#{$n}):before {
+      top: ($tab-height + $tab-margin-bottom) * ($n - 1);
+    }
+  }
+  &-content {
+    padding: 15px 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-width: 100%;
+    flex-grow: 1;
+  }
+  &-actions {
+    padding: 10px;
+    text-align: right;
+    .button {
+      margin-left: .5rem;
+    }
+  }
+}

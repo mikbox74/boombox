@@ -1,0 +1,193 @@
+.as {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  position: relative;
+  justify-content: start;
+  padding-bottom: $keyboard-height;
+  border-radius: 4px;
+  .gril {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: -4px;
+    box-sizing: border-box;
+    background-image: 
+      linear-gradient(
+        90deg,
+        #191919 0,
+        #212121 10px,
+        $brand-color 11px,
+        $brand-color 13px,
+        #14141400 13px
+      ),
+      linear-gradient(
+        -90deg,
+        #191919 0,
+        #212121 10px,
+        $brand-color 11px,
+        $brand-color 13px,
+        #14141400 13px
+      );
+    &:before {
+      display: block;
+      content: '';
+      border: 0px solid $brand-color;
+      border-width: 2px 0;
+      width: 91.5%;
+      background-image: 
+        radial-gradient(
+          #0000 0px, 
+          #0003 1px,
+          #000f 2px
+        );
+      background-size: 4px 4px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 10;
+    }
+  }
+  .bass {
+    margin-top: 20px;
+    border: 3px solid #000;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    width: 80%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+  }
+  .twitter {
+    margin-top: 20px;
+    border: 3px solid #000;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    width: 40%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+  }
+  .driver {
+    width: 100%;
+    height: 100%;
+    background-image: 
+      //dome
+      radial-gradient(
+        #ccc 0%,
+        #777 10%,
+        #333333 17%,
+        #33333355 19%,
+        #10101055 20%,
+        #10101000 22%
+      ),
+      //rubber
+      radial-gradient(
+        #15151500 54%,
+        #000 55%,
+        #111 60%,
+        #000 70%
+      ),
+      //light
+      conic-gradient(
+        #ffffff00 0deg,
+        #ffffff05 160deg,
+        #ffffff17 210deg,
+        #ffffff17 230deg,
+        #ffffff05 300deg,
+        #ffffff00 360deg
+      ),
+      //diffuser
+      radial-gradient(
+        #333333 0%,
+        #333333 20%,
+        #101010 20%,
+        #151515 54%,
+        #15151500 55%
+      );
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: scale(1);
+  }
+  .twitter .driver {
+    background-image: 
+      //dome
+      radial-gradient(
+        #ccc 0%,
+        #777 10%,
+        #333333 17%,
+        #33333355 19%,
+        #10101055 20%,
+        #10101000 22%
+      ),
+      //rubber
+      radial-gradient(
+        #15151500 64%,
+        #111 65%,
+        #222 70%,
+        #111 80%
+      ),
+      //light
+      conic-gradient(
+        #ffffff00 0deg,
+        #ffffff05 160deg,
+        #ffffff17 210deg,
+        #ffffff17 230deg,
+        #ffffff05 300deg,
+        #ffffff00 360deg
+      ),
+      //diffuser
+      radial-gradient(
+        #333333 0%,
+        #333333 20%,
+        #101010 20%,
+        #151515 54%,
+        #15151500 55%
+      );
+  }
+  &.left {
+    border-right: 1px solid #222;
+  }
+  &.right {
+    border-left: 2px solid #040404;
+  }
+  .bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 3px 3px;
+    flex-basis: 100%;
+    height: $keyboard-height;
+    max-height: $keyboard-height;
+    padding-left: 12px;
+    padding-top: 0;
+    display: flex;
+    box-sizing: border-box;
+    background-image: 
+      linear-gradient(
+        #222222 0,
+        #222222 1px,
+        #191919 2px,
+        #191919 $keyboard-height / 3,
+        #212121 $keyboard-height / 3 + 2,
+        #212121 $keyboard-height / 1.5,
+        #121212 $keyboard-height / 1.5 + 2,
+        #101010 $keyboard-height
+      );
+    div {
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: bold;
+      transform: scale(0.5, 0.9);
+      transform-origin: left center;
+    }
+  }
+}

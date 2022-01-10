@@ -1,0 +1,105 @@
+@mixin eq-trackbg {
+  border-radius: 2px;
+  background-color: $eq-track-color;
+  box-shadow: inset 1px 1px 2px 1px lighten($eq-track-color, 5%);
+}
+@mixin eq-thumb {
+  height: $eq-thumbh;
+  width: $eq-thumbw;
+  border: 0;
+  box-shadow: -10px -5px 20px 0 #1a1a1a;
+  border-radius: 2px;
+  cursor: pointer;
+  background-image: linear-gradient(
+      180deg, 
+      darken(white, 66%),
+      darken(white, 38%) 4%,  
+      darken(white, 56%) 8%,
+      white 45%,
+      black 46%, 
+      darken(white, 20%) 47%,  
+      darken(white, 20%) 53%, 
+      black 54%, 
+      white 57%,
+      darken(white, 30%) 88%,
+      darken(white, 70%) 96%, 
+      darken(white, 68%)
+  );
+  &:focus{
+    outline: none;
+  }
+}
+
+@mixin spindle {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 0;
+  width: 20px;
+  aspect-ratio: 1 / 1;
+  background-image: 
+    conic-gradient(
+      #000 0%,
+      #555 10%, 
+      #000 20%, 
+      #000 20%,
+      #000 100%
+    );
+  border-radius: 50%;
+  top: $case-y-margin + $reel-center-y-margin;
+  transform: translate(-50%, -50%);
+}
+
+@mixin led-color($color) {
+  color: $color;
+  background-color: currentColor;
+  box-shadow: 0 0 20px 2px fade-out($color, 0.3);
+  background-image: radial-gradient(
+    #ffffff55 0%,
+    #ffffff00 100%,
+  );
+}
+
+@mixin radio-pointer {
+  width: 40px;
+  background-image: 
+    linear-gradient(
+      90deg,
+      #00000099 0%, 
+      #00000099 47%,
+      //#00000055 47%,
+      #00000000 48%,
+      #00000000 52%,
+      #00000066 53%,
+      #00000088 70%,
+      #00000099 100%
+    ),
+    linear-gradient($brand-color, $brand-color)
+    ;
+  height: 12px;
+  margin-top: -8px;
+  border-radius: 0 0 2px 2px;
+  box-shadow: -2px 1px 4px 0 #000;
+  cursor: pointer;
+  border: none;
+}
+
+@mixin marquee($width) {
+  overflow: hidden;
+  text-align: left;
+  width: $width;
+  &:before {
+    min-width: $width;
+    content: attr(data-marquee);
+    display: inline-block;
+    transform: translateX(0);
+    transition: 1s linear;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &:hover:before {
+    width: auto;
+    transform: translateX(calc($width - 100%));
+  }
+}
