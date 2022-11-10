@@ -60,12 +60,6 @@
     "title": ""
   },
   {
-    "id": "11",
-    "name": "Радио 7",
-    "src": "https://radio7.hostingradio.ru:8040/radio7256.mp3",
-    "title": ""
-  },
-  {
     "id": "13",
     "name": "Радио Монте Карло",
     "src": "https://montecarlo.hostingradio.ru/montecarlo128.mp3",
@@ -75,18 +69,6 @@
     "id": "14",
     "name": "МАЯК",
     "src": "https://icecast-vgtrk.cdnvideo.ru/mayakfm_mp3_128kbps",
-    "title": ""
-  },
-  {
-    "id": "15",
-    "name": "Italo Sound",
-    "src": "https://icecast.italosound.com/italosound",
-    "title": ""
-  },
-  {
-    "id": "16",
-    "name": "Hard House UK",
-    "src": "https://streams.netmindz.net/hhuk.mp3",
     "title": ""
   },
   {
@@ -172,12 +154,6 @@
       "title": ".song",
       "bitrate": ".kbps"
     }
-  },
-  {
-    "id": "33",
-    "name": "Latin Groove",
-    "src": "https://server7.servistreaming.com/proxy/luigi2?mp=/stream",
-    "title": ""
   },
   {
     "id": "34",
