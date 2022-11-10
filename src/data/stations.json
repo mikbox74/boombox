@@ -2,122 +2,80 @@
   {
     "id": "1",
     "name": "Italodance Pilot",
-    "src": "http://radio.italodance.pl:7694/;?type=https&nocache=506056",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser",
-    "nowPlayingParams": {
-      "url": "http://radio.italodance.pl:7694/7.html"
-    }
+    "src": "https://s1.slotex.pl:7694/stream/1/",
+    "title": ""
   },
   {
     "id": "2",
     "name": "Miami Radio Atlantic",
     "src": "https://broadcast.miami/proxy/atlantic?mp=/stream",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "3",
     "name": "Miami Radio Prelude",
     "src": "https://broadcast.miami/proxy/prelude?mp=/stream/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "4",
     "name": "Miami Radio Casablanca",
     "src": "https://broadcast.miami/proxy/casablanca?mp=/stream/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "5",
     "name": "Miami Radio Columbia",
     "src": "https://broadcast.miami/proxy/columbia?mp=/stream/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "6",
     "name": "Miami Radio T.K. Disco",
     "src": "https://broadcast.miami/proxy/tkdisco?mp=/stream/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "7",
     "name": "Miami Radio Unidisco",
     "src": "https://broadcast.miami/proxy/unidisco?mp=/stream/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "8",
     "name": "Miami Radio Salsoul",
     "src": "https://broadcast.miami/proxy/salsoul?mp=/stream/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "9",
     "name": "Miami Radio West End",
     "src": "https://broadcast.miami/proxy/westend?mp=/stream/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "10",
     "name": "Miami Radio Solar",
     "src": "https://broadcast.miami/proxy/solar?mp=/stream/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser"
+    "title": ""
   },
   {
     "id": "11",
     "name": "Радио 7",
-    "src": "http://retroserver.streamr.ru:8040/radio7256.mp3",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://radio7.ru/on_air/onair.json.js",
-      "artist": ".playlist[0].artist.name",
-      "title": ".playlist[0].song.name"
-    }
-  },
-  {
-    "id": "12",
-    "name": "Melodia FM Disco",
-    "src": "https://online.melodiafm.ua/MelodiaFM_Disco_HD",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://o.tavrmedia.ua/melodiad",
-      "artist": "[0].singer",
-      "title": "[0].song"
-    }
+    "src": "https://radio7.hostingradio.ru:8040/radio7256.mp3",
+    "title": ""
   },
   {
     "id": "13",
     "name": "Радио Монте Карло",
     "src": "https://montecarlo.hostingradio.ru/montecarlo128.mp3",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://montecarlo.ru/api/radio/current",
-      "artist": "['93a858ce-4a04-4997-9d15-ed89a6d9544c'].current_track.song_artist",
-      "title": "['93a858ce-4a04-4997-9d15-ed89a6d9544c'].current_track.song_title"
-    }
+    "title": ""
   },
   {
     "id": "14",
     "name": "МАЯК",
     "src": "https://icecast-vgtrk.cdnvideo.ru/mayakfm_mp3_128kbps",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://radiomayak.ru/schedule/inair/",
-      "title": ".current.episode.title"
-    }
+    "title": ""
   },
   {
     "id": "15",
@@ -128,44 +86,25 @@
   {
     "id": "16",
     "name": "Hard House UK",
-    "src": "http://streams.netmindz.net/hhuk.mp3",
-    "title": "",
-    "nowPlayingParser": "icecast224TagsParser"
+    "src": "https://streams.netmindz.net/hhuk.mp3",
+    "title": ""
   },
   {
     "id": "17",
     "name": "Eurodance (FFH Radio)",
-    "src": "http://mp3.ffh.de/ffhchannels/hqeurodance.mp3",
+    "src": "https://mp3.ffh.de/ffhchannels/hqeurodance.mp3",
     "title": "",
     "nowPlayingParser": "jsonTagsParser",
     "nowPlayingParams": {
       "url": "https://www.ffh.de/update-onair-info?tx_ffhonair_pi2%5Baction%5D=getallsonginfo&tx_ffhonair_pi2%5Bcontroller%5D=Webradio&tx_ffhonair_pi2%5Bformat%5D=json&type=210&cHash=072a80f1588be6728ef4213e76c4f4eb",
-      "artist": "[14].ffheurodance.artist",
-      "title": "[14].ffheurodance.title"
-    }
-  },
-  {
-    "id": "18",
-    "name": "Loca FM Remember",
-    "src": "http://s02.fjperezdj.com:8035/live",
-    "title": ""
-  },
-  {
-    "id": "21",
-    "name": "Eurodance 90",
-    "src": "http://91.121.59.45:8394/stream",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://eurodance90.fr/topper/aspihisto.php",
-      "artist": ".displayss1",
-      "title": ".displayss2"
+      "artist": "[25].ffheurodance.artist",
+      "title": "[25].ffheurodance.title"
     }
   },
   {
     "id": "22",
     "name": "Die 90er (Sunshine Live)",
-    "src": "http://sunshinelive.hoerradar.de/sunshinelive-90er-mp3-hq",
+    "src": "https://sunsl.streamabc.net/sunsl-90er-mp3-192-1681158",
     "title": "",
     "nowPlayingParser": "jsonTagsParser",
     "nowPlayingParams": {
@@ -177,60 +116,26 @@
   {
     "id": "23",
     "name": "SUN RADIO - CAFE",
-    "src": "http://54.38.43.201:8068/stream-128kmp3-CafeSoulside_autodj",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://www.vip-radios.fm/wp-admin/admin-ajax.php?action=get_radio_history&station=474&cookie=1",
-      "artist": ".current.artist",
-      "title": ".current.title"
-    }
+    "src": "https://radio2.vip-radios.fm:18068/stream-128kmp3-CafeSoulside",
+    "title": ""
   },
   {
     "id": "24",
     "name": "Smooth Jazz Lounge",
     "src": "https://radio4.vip-radios.fm:18060/stream-128kmp3-SmoothJazzLounge",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://www.vip-radios.fm/wp-admin/admin-ajax.php?action=get_radio_history&station=199",
-      "artist": ".current.artist",
-      "title": ".current.title"
-    }
+    "title": ""
   },
   {
     "id": "25",
     "name": "SUN RADIO - BAR",
     "src": "https://radio2.vip-radios.fm:18065/stream-128kmp3-BarSoulside",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://www.vip-radios.fm/wp-admin/admin-ajax.php?action=get_radio_history&station=486",
-      "artist": ".current.artist",
-      "title": ".current.title"
-    }
+    "title": ""
   },
   {
     "id": "26",
     "name": "Millenium Dance",
     "src": "https://radio2.vip-radios.fm:18000/stream-128kmp3-MilleniumDance",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://www.vip-radios.fm/wp-admin/admin-ajax.php?action=get_radio_history&station=464",
-      "artist": ".current.artist",
-      "title": ".current.title"
-    }
-  },
-  {
-    "id": "27",
-    "name": "Радио 80",
-    "src": "http://radio80.ru:7777/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser",
-    "nowPlayingParams": {
-      "url": "http://radio80.ru:7777/7.html"
-    }
+    "title": ""
   },
   {
     "id": "28",
@@ -248,11 +153,7 @@
     "id": "29",
     "name": "Soulfulradio",
     "src": "https://streamingserver-03.com/proxy/soulfulradio?mp=/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser",
-    "nowPlayingParams": {
-      "url": "https://kastproxy-us.herokuapp.com/https://streamingserver-03.com/proxy/soulfulradio?mp=/7.html"
-    }
+    "title": ""
   },
   {
     "id": "30",
@@ -264,13 +165,7 @@
     "id": "31",
     "name": "Garage FM",
     "src": "http://213.189.208.146:8005/Garagefm192",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "https://garagefm.ru/online.json",
-      "artist": ".artist",
-      "title": ".name"
-    }
+    "title": ""
   },
   {
     "id": "32",
@@ -293,7 +188,7 @@
   {
     "id": "34",
     "name": "Christmas (80s 80s)",
-    "src": "http://80s80s.hoerradar.de/80s80s-event01-mp3-hq",
+    "src": "https://80s80s.hoerradar.de/80s80s-event01-mp3-hq",
     "title": "",
     "nowPlayingParser": "jsonTagsParser",
     "nowPlayingParams": {
@@ -305,35 +200,8 @@
   {
     "id": "35",
     "name": "Bad Beat Radio",
-    "src": "http://misato.ru-hoster.com:8061/badbeatradio",
-    "title": "",
-    "nowPlayingParser": "jsonTagsParser",
-    "nowPlayingParams": {
-      "url": "http://aska.ru-hoster.com:2199/external/rpc.php?&m=streaminfo.get&username=volrobad&rid=volrobad",
-      "title": ".data[0].track.title",
-      "artist": ".data[0].track.artist",
-      "bitrate": ".data[0].bitrate"
-    }
-  },
-  {
-    "id": "36",
-    "name": "Jungle Train",
-    "src": "http://stream6.jungletrain.net:8000/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser",
-    "nowPlayingParams": {
-      "url": "http://stream6.jungletrain.net:8000/7.html"
-    }
-  },
-  {
-    "id": "37",
-    "name": "Kool London",
-    "src": "http://uk1-pn.webcast-server.net:8698/;",
-    "title": "",
-    "nowPlayingParser": "shoutcastTagsParser",
-    "nowPlayingParams": {
-      "url": "http://uk1-pn.webcast-server.net:8698/7.html"
-    }
+    "src": "https://misato.ru-hoster.com:8061/badbeatradio",
+    "title": ""
   },
   {
     "id": "38",
@@ -343,15 +211,8 @@
     "nowPlayingParser": "jsonTagsParser",
     "nowPlayingParams": {
       "url": "https://www.ffh.de/update-onair-info?tx_ffhonair_pi2%5Baction%5D=getallsonginfo&tx_ffhonair_pi2%5Bcontroller%5D=Webradio&tx_ffhonair_pi2%5Bformat%5D=json&type=210&cHash=072a80f1588be6728ef4213e76c4f4eb",
-      "artist": "[16].ffhsummerfeeling.artist",
-      "title": "[16].ffhsummerfeeling.title"
+      "artist": "[23].ffhsummerfeeling.artist",
+      "title": "[23].ffhsummerfeeling.title"
     }
-  },
-  {
-    "id": "39",
-    "name": "Новогоднее радио",
-    "src": "https://2.stream.radiosignal.one:8000/deep",
-    "title": "",
-    "nowPlayingParser": "icecast224TagsParser"
   }
 ]
